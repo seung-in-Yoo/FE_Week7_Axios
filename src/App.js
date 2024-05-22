@@ -5,16 +5,17 @@ import User from "./pages/User"
 import NotFound from "./pages/NotFound"
 import Layout from "./pages/Layout"
 
+
 const App = () => {
   return (
     <BrowserRouter>
       <Routes>
-       <Route element={<Layout />}>
+        <Route element={<Layout />}>
         <Route path= "/" element={<Home/>}/>
         <Route path= "/menu" element={<Menu/>}/>
         <Route path= "/user/:userId" element={<User />} />
         <Route path= "*" element={<NotFound />} />
-       </Route>
+        </Route>
       </Routes>
     </BrowserRouter>
   );
