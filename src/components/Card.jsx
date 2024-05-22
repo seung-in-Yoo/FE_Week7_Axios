@@ -13,14 +13,14 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  
 `;
 
 export default function Card({ img, name, id}) {
     const navigate = useNavigate();
-  
     return (
-      <Wrapper id={id} onClick={() => navigate(`/user/{id}`)}>
-        <Photo src={img} />
+      <Wrapper id={id} onClick={() => navigate(`/user/${id}`)}>
+        <Photo src={img} alt={name}/>
         <Margin height={10}/>
         <a>{name}</a>
       </Wrapper>
